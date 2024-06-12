@@ -14,6 +14,8 @@ const displayAdvice = async () => {
         adviceText.className = "advice-container"
         adviceText.innerText = adviceData.slip.advice
 
+        const mainContent = document.querySelector("#main")
+        mainContent.className = "mainContent"
         const adcviceIdtext = document.createElement("div")
         const adviceId = adviceData.slip.advice
         adcviceIdtext.className = "advice-id"
@@ -27,9 +29,9 @@ const displayAdvice = async () => {
         nextBtn.addEventListener('click', () => {
             location.reload()
         })
-        document.body.appendChild(adcviceIdtext)
-        document.body.appendChild(adviceText)
-        document.body.appendChild(nextBtn)
+        mainContent.appendChild(adcviceIdtext)
+        mainContent.appendChild(adviceText)
+        mainContent.appendChild(nextBtn)
     }
 }
 displayAdvice()
